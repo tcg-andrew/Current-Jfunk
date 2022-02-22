@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13cc92de-920a-44c7-8582-7b15b439840a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:9010/freightrateservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="freightrateservice.disco" MetadataType="Disco" ID="5141a018-30c8-441a-9e88-244affad2be8" SourceId="1" SourceUrl="https://localhost:9010/freightrateservice?disco" />
+    <MetadataFile FileName="FreightRateService.wsdl" MetadataType="Wsdl" ID="2c84385e-175e-4f9f-9de6-1e2028cf5c74" SourceId="1" SourceUrl="https://localhost:9010/freightrateservice?wsdl" />
+    <MetadataFile FileName="freightrateservice1.wsdl" MetadataType="Wsdl" ID="ee619725-140a-4266-9a8c-d029653d135b" SourceId="1" SourceUrl="https://localhost:9010/freightrateservice?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

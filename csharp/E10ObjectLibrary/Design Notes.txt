@@ -1,0 +1,9 @@
+﻿ObjectLibrary serves as the Data Access Layer for TCGEpicor
+
+Retrieve functions retrieve data through the use of SQL stored procedures
+
+Create, Update and Delete functions operate through the Epicor business objects
+
+All input and output from the ObjectLibrary is done through Objects defined in the relevant classes.  This is to provide intermediary data manipulation(formatting, transform, etc.)
+
+For Vantage Bridge to work, MySql.Data.msi has to be installed

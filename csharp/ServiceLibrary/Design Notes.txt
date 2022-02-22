@@ -1,0 +1,7 @@
+﻿ServiceLibrary serves as the Business Logic Layer for TCGEpicor
+
+At the moment the logic is simple enough that it is bundled with the WCF service that hosts it.  If future needs call for other access outside WCF, the relevant logic can be abstracted out.  I may do this anyways, if it becomes complex enough.
+
+A note on the same named return classes that are nested in various sub-namespaces defined in the "Data Formats" regions: this is done to reduce the data size sent across the wire while keeping a uniform SOAP structure on the receiving end, which 
+includes non C# clients (ex. accessing the customer get functions will always yield a "customer" node even though the children inside it may be different)
+This does add minor complexity to WCF clients (you wind up with customer, customer1, customer2, etc), however Visual Studio Intellisense makes it much easier to deal with that in this environment then it would be in non-VS environments.

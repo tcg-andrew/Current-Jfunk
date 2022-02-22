@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CapacityOneDay">
+</Property><Property Name="Solution File" Value="C:\Users\mturner\Documents\code\sql\csharp\CapacityOneDay\CapacityOneDay.sln">
+</Property><Property Name="Date" Value="Monday, June 17, 2013">
+</Property><Property Name="Time" Value="13:41 PM">
+</Property></Properties><Event ErrorLevel="4" Project="CapacityOneDay" Source="http://go.microsoft.com/fwlink/?LinkId=159919" Description="Warning: this project requires Crystal Reports, which is no longer included with Visual Studio. Please click here for more information.">
+</Event><Event ErrorLevel="0" Project="CapacityOneDay" Source="CapacityOneDay\CapacityOneDay.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CapacityOneDay" Source="CapacityOneDay\CapacityOneDay.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Test" Source="Test\Test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CapacityOneDay.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CapacityOneDay.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CapacityOneDay" Source="CapacityOneDay\CapacityOneDay.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Test" Source="Test\Test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

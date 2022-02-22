@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://services.mihlfeld.com/opensource.asmx?wsdl" docRef="https://services.mihlfeld.com/opensource.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://services.mihlfeld.com/opensource.asmx" xmlns:q1="https://www.mihlfeld.com" binding="q1:OpenSourceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://services.mihlfeld.com/opensource.asmx" xmlns:q2="https://www.mihlfeld.com" binding="q2:OpenSourceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

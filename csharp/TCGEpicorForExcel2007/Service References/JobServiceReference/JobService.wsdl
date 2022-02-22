@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/jobservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JobService" targetNamespace="http://services.it.tcg/epicor/jobservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IJobService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpBinding_IJobService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/jobservice">
+      <xsd:element name="GetJobsWithMismatchedDates">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetJobsWithMismatchedDatesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetJobsWithMismatchedDatesResult" nillable="true" type="tns:jobgetmismatchresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="jobgetmismatchresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q1="http://schemas.datacontract.org/2004/07/ObjectLibrary" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfJob" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="jobgetmismatchresult" nillable="true" type="tns:jobgetmismatchresult" />
+      <xsd:element name="UpdateJobDates">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="username" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string" />
+            <xsd:element xmlns:q2="http://schemas.datacontract.org/2004/07/ObjectLibrary" minOccurs="0" name="jobs" nillable="true" type="q2:ArrayOfJob" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateJobDatesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="UpdateJobDatesResult" nillable="true" type="tns:jobgetstringresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="jobgetstringresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="jobgetstringresult" nillable="true" type="tns:jobgetstringresult" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ObjectLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ObjectLibrary">
+      <xsd:complexType name="ArrayOfJob">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Job" nillable="true" type="tns:Job" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfJob" nillable="true" type="tns:ArrayOfJob" />
+      <xsd:complexType name="Job">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="JobNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="OrderDate" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="OrderLine" type="xsd:int" />
+          <xsd:element minOccurs="0" name="OrderNum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="OrderRel" type="xsd:int" />
+          <xsd:element minOccurs="0" name="ReqDate" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Job" nillable="true" type="tns:Job" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IJobService_GetJobsWithMismatchedDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithMismatchedDates" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithMismatchedDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithMismatchedDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDates" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDatesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJobService">
+    <wsdl:operation name="GetJobsWithMismatchedDates">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/jobservice/IJobService/GetJobsWithMismatchedDates" message="tns:IJobService_GetJobsWithMismatchedDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/jobservice/IJobService/GetJobsWithMismatchedDatesResponse" message="tns:IJobService_GetJobsWithMismatchedDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDates">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/jobservice/IJobService/UpdateJobDates" message="tns:IJobService_UpdateJobDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/jobservice/IJobService/UpdateJobDatesResponse" message="tns:IJobService_UpdateJobDates_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJobService" type="tns:IJobService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IJobService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetJobsWithMismatchedDates">
+      <soap:operation soapAction="http://services.it.tcg/epicor/jobservice/IJobService/GetJobsWithMismatchedDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDates">
+      <soap:operation soapAction="http://services.it.tcg/epicor/jobservice/IJobService/UpdateJobDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IJobService1" type="tns:IJobService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IJobService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetJobsWithMismatchedDates">
+      <soap:operation soapAction="http://services.it.tcg/epicor/jobservice/IJobService/GetJobsWithMismatchedDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDates">
+      <soap:operation soapAction="http://services.it.tcg/epicor/jobservice/IJobService/UpdateJobDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JobService">
+    <wsdl:port name="BasicHttpBinding_IJobService" binding="tns:BasicHttpBinding_IJobService">
+      <soap:address location="https://itmart.it.tcg/jobservice" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IJobService1" binding="tns:BasicHttpBinding_IJobService1">
+      <soap:address location="https://itmart.it.tcg/jobservice/windows" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

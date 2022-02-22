@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\sql2\c$\Inetpub\wwwroot\Epicor" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/ObjectLibrary.dll" publishTime="03/22/2011 16:07:17" />
+    <file relUrl="bin/Epicor.Mfg.Pro.Convert.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Epicor.Mfg.IF.IUserFile.xml" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Epicor.Mfg.BO.AbcCode.dll" publishTime="12/24/2009 09:32:56" />
+    <file relUrl="bin/WebServiceHost.pdb" publishTime="03/22/2011 16:07:27" />
+    <file relUrl="bin/Epicor.Mfg.Core.BLConnectionPool.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Progress.ssl.dll" publishTime="12/24/2009 09:33:32" />
+    <file relUrl="ShipToService.asmx" publishTime="03/22/2011 15:49:12" />
+    <file relUrl="bin/Epicor.Mfg.Lib.ISessionMod.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Epicor.Mfg.BO.AbcCode.xml" publishTime="12/24/2009 09:32:56" />
+    <file relUrl="bin/Progress.Messages.dll" publishTime="12/24/2009 09:33:32" />
+    <file relUrl="bin/Epicor.Mfg.BO.UserFile.xml" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.Core.Version.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/ObjectLibrary.pdb" publishTime="03/22/2011 16:07:17" />
+    <file relUrl="bin/Epicor.Mfg.IF.IAbcCode.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.Lib.SessionMod.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Progress.o4glrt.dll" publishTime="12/24/2009 09:33:32" />
+    <file relUrl="bin/Epicor.Mfg.Common.BOExceptions.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.IF.IAbcCode.xml" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.Core.Session.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.BO.LangName.dll" publishTime="12/24/2009 09:32:56" />
+    <file relUrl="bin/Epicor.Mfg.Lib.Cryptography.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="CustomerService.asmx" publishTime="03/22/2011 15:37:39" />
+    <file relUrl="bin/Epicor.Mfg.IF.IUserFile.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Epicor.Mfg.IF.ILangName.dll" publishTime="12/24/2009 09:33:04" />
+    <file relUrl="bin/WebServiceHost.dll" publishTime="03/22/2011 16:07:28" />
+    <file relUrl="Web.config" publishTime="03/22/2011 16:08:29" />
+    <file relUrl="bin/Epicor.Mfg.Lib.AppSettingsHandler.dll" publishTime="12/24/2009 09:33:10" />
+    <file relUrl="bin/Epicor.Mfg.BO.LangName.xml" publishTime="12/24/2009 09:32:56" />
+    <file relUrl="bin/Epicor.Mfg.BO.UserFile.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.Diagnostics.Core.dll" publishTime="12/24/2009 09:32:58" />
+    <file relUrl="bin/Epicor.Mfg.IF.ILangName.xml" publishTime="12/24/2009 09:33:04" />
+    <file relUrl="PartService.asmx" publishTime="03/22/2011 15:59:20" />
+  </publishProfile>
+</publishData>

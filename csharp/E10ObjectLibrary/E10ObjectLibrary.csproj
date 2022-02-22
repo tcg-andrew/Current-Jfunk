@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EA1B99B-FC2F-405A-BD1A-6714AD1EE695}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObjectLibrary</RootNamespace>
+    <AssemblyName>ObjectLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.App.Version, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Epicor.App.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="Epicor.Ice.Version, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Epicor.Ice.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="Epicor.ServiceModel, Version=3.1.600.0, Culture=neutral, PublicKeyToken=37a5ccb872c00aec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Epicor.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\Downloads\EPPlus 4.0.5\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Common.ContractInterfaces">
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Common.ContractInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.ABCCode, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.ABCCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.ConfiguratorExpVars, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.ConfiguratorExpVars.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Customer, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.EmpBasic, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.EmpBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.EngWorkBench, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.EngWorkBench.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Forecast, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.Forecast.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.IssueReturn, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.IssueReturn.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.JobEntry, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.JobEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Labor, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.Labor.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Part, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.Part.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.PartRevSearch, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.PartRevSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.PREmployee, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.PREmployee.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Quote, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.Quote.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.QuoteAsm, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.QuoteAsm.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.SalesOrder, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.SalesOrder.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.ScheduleEngine, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.ScheduleEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.UOM, Version=10.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Erp.Contracts.BO.UOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UserFile, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Contracts.BO.UserFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.Lib.BOReader">
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Contracts.Lib.BOReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.Lib.SessionMod, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Contracts.Lib.SessionMod.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Lib.AppSettingsHandler, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Lib.AppSettingsHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Lib.Cryptography, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Lib.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Lib.Deployment, Version=3.1.600.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\E10Upgrade\Ice.Lib.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.UOMClass">
+      <HintPath>..\..\..\..\..\..\Epicor\ERP10\LocalClients\EpicorDB_D\Erp.Contracts.BO.UOMClass.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.2.5\Assemblies\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABCCodeInterface.cs" />
+    <Compile Include="EmployeeInterface.cs" />
+    <Compile Include="EngWorkbenchInterface.cs" />
+    <Compile Include="FoxProDB.cs" />
+    <Compile Include="IssueReturnInterface.cs" />
+    <Compile Include="JobInterface.cs" />
+    <Compile Include="LaborInterface.cs" />
+    <Compile Include="OprTimesInterface.cs" />
+    <Compile Include="OrderInterface.cs" />
+    <Compile Include="PREmployeeInterface.cs" />
+    <Compile Include="ProductionInterface.cs" />
+    <Compile Include="QuoteAssemblyInterface.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ConfigurationInterface.cs" />
+    <Compile Include="CustomerInterface.cs" />
+    <Compile Include="EpicorExtension.cs" />
+    <Compile Include="FreightRateInterface.cs" />
+    <Compile Include="PartInterface.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuoteInterface.cs" />
+    <Compile Include="ScheduleEngineInterface.cs" />
+    <Compile Include="Service References\MihlfeldServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShipToInterface.cs" />
+    <Compile Include="TCBridgeInterface.cs" />
+    <Compile Include="UOMClassInterface.cs" />
+    <Compile Include="UOMInterface.cs" />
+    <Compile Include="VantageBridgeInterface.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Design Notes.txt" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\MihlfeldServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MihlfeldServiceReference\configuration.svcinfo" />
+    <None Include="Service References\MihlfeldServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MihlfeldServiceReference\opensource.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MihlfeldServiceReference\opensource.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MihlfeldServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLAccess\SQLAccess.csproj">
+      <Project>{308b958b-6b89-4526-acea-9b97b3faf7a8}</Project>
+      <Name>SQLAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

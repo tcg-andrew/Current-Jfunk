@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/productionservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductionService" targetNamespace="http://services.it.tcg/epicor/productionservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/productionservice">
+      <xsd:element name="getonedaydetail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="lookupdate" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="prior" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getonedaydetailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getonedaydetailResult" nillable="true" type="tns:onedaydetailgetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="onedaydetailgetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfonedaydetail" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="onedaydetailgetresult" nillable="true" type="tns:onedaydetailgetresult" />
+      <xsd:element name="getsobasedschedule">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getsobasedscheduleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getsobasedscheduleResult" nillable="true" type="tns:sobasedschedulegetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="sobasedschedulegetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q2:ArrayOfsobasedschedule" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sobasedschedulegetresult" nillable="true" type="tns:sobasedschedulegetresult" />
+      <xsd:element name="getactivelabor">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getactivelaborResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getactivelaborResult" nillable="true" type="tns:activelaborgetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="activelaborgetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q3:ArrayOfactivelabor" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="activelaborgetresult" nillable="true" type="tns:activelaborgetresult" />
+      <xsd:element name="getmesinfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getmesinfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getmesinfoResult" nillable="true" type="tns:mesinfogetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="mesinfogetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q4:ArrayOfmesinfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="mesinfogetresult" nillable="true" type="tns:mesinfogetresult" />
+      <xsd:element name="getmesdrawing">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="mesnum" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getmesdrawingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getmesdrawingResult" nillable="true" type="tns:mesdrawinggetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="mesdrawinggetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q5:ArrayOfmesdrawing" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="mesdrawinggetresult" nillable="true" type="tns:mesdrawinggetresult" />
+      <xsd:element name="getpadata">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="assemblyseq" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getpadataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getpadataResult" nillable="true" type="tns:padatagetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="padatagetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q6:ArrayOfpadata" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="padatagetresult" nillable="true" type="tns:padatagetresult" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary">
+      <xsd:complexType name="ArrayOfonedaydetail">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="onedaydetail" nillable="true" type="tns:onedaydetail" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfonedaydetail" nillable="true" type="tns:ArrayOfonedaydetail" />
+      <xsd:complexType name="onedaydetail">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="assembly" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="configpart" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="crddate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="doors" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frames" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="imageurl" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="openings" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="part" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="specialinstructions" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="onedaydetail" nillable="true" type="tns:onedaydetail" />
+      <xsd:complexType name="ArrayOfsobasedschedule">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="sobasedschedule" nillable="true" type="tns:sobasedschedule" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfsobasedschedule" nillable="true" type="tns:ArrayOfsobasedschedule" />
+      <xsd:complexType name="sobasedschedule">
+        <xsd:sequence>
+          <xsd:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activeemployees" nillable="true" type="q7:ArrayOfstring" />
+          <xsd:element minOccurs="0" name="assemblyseq" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="character01" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="character05" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="character07" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="crddate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="custid" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drawnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jobasmcommenttext" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jobheadcommenttext" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="linedesc" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="needbydate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="number01" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="opcode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="openrelease" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="oprseq" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderline" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ordernum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orderrelnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ourjobshippedqty" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ourreqqty" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ourstockshippedqty" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="outstandingqty" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="partnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="picurl" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ponum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="qtycompleted" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="reqdate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="revisionnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="runqty" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="shipviacode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="shortchar01" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sobasedschedule" nillable="true" type="tns:sobasedschedule" />
+      <xsd:complexType name="ArrayOfactivelabor">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="activelabor" nillable="true" type="tns:activelabor" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfactivelabor" nillable="true" type="tns:ArrayOfactivelabor" />
+      <xsd:complexType name="activelabor">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="assemblyseq" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="employeename" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="oprcode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="oprseq" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="revision" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="activelabor" nillable="true" type="tns:activelabor" />
+      <xsd:complexType name="ArrayOfmesinfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="mesinfo" nillable="true" type="tns:mesinfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfmesinfo" nillable="true" type="tns:ArrayOfmesinfo" />
+      <xsd:complexType name="mesinfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="hasdrawings" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="mesnum" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="mesinfo" nillable="true" type="tns:mesinfo" />
+      <xsd:complexType name="ArrayOfmesdrawing">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="mesdrawing" nillable="true" type="tns:mesdrawing" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfmesdrawing" nillable="true" type="tns:ArrayOfmesdrawing" />
+      <xsd:complexType name="mesdrawing">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="file" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="filedata" nillable="true" type="xsd:base64Binary" />
+          <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="mesdrawing" nillable="true" type="tns:mesdrawing" />
+      <xsd:complexType name="ArrayOfpadata">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="padata" nillable="true" type="tns:padata" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfpadata" nillable="true" type="tns:ArrayOfpadata" />
+      <xsd:complexType name="padata">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="drdramhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drdramlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drdrohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drdrohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drfrohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drfrohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drfrwire" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drglohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="drglohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frfwohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frfwohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frmuohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frmuohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frmuwire" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frstohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frstohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frstwire" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtfamhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtfamlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtfohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtfohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtmohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtmohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtsohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frtsohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw1ohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw1ohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw1wire" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw2ohhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw2ohlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="frw2wire" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="isdoor" type="xsd:boolean" />
+          <xsd:element minOccurs="0" name="isframe" type="xsd:boolean" />
+          <xsd:element minOccurs="0" name="ltampshi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ltampslo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sudfamhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sudfamlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sudlamhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sudlamlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="suflamhi" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="suflamlo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sumxamhe" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sumxamlt" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sumxamto" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="surtamhe" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="surtamlt" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="padata" nillable="true" type="tns:padata" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <xsd:complexType name="ArrayOfstring">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductionService_getonedaydetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getonedaydetail" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getonedaydetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getonedaydetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getsobasedschedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:getsobasedschedule" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getsobasedschedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getsobasedscheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getactivelabor_InputMessage">
+    <wsdl:part name="parameters" element="tns:getactivelabor" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getactivelabor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getactivelaborResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getmesinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getmesinfo" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getmesinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getmesinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getmesdrawing_InputMessage">
+    <wsdl:part name="parameters" element="tns:getmesdrawing" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getmesdrawing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getmesdrawingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getpadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpadata" />
+  </wsdl:message>
+  <wsdl:message name="IProductionService_getpadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpadataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductionService">
+    <wsdl:operation name="getonedaydetail">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getonedaydetail" message="tns:IProductionService_getonedaydetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getonedaydetailResponse" message="tns:IProductionService_getonedaydetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getsobasedschedule">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getsobasedschedule" message="tns:IProductionService_getsobasedschedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getsobasedscheduleResponse" message="tns:IProductionService_getsobasedschedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getactivelabor">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getactivelabor" message="tns:IProductionService_getactivelabor_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getactivelaborResponse" message="tns:IProductionService_getactivelabor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getmesinfo">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getmesinfo" message="tns:IProductionService_getmesinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getmesinfoResponse" message="tns:IProductionService_getmesinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getmesdrawing">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getmesdrawing" message="tns:IProductionService_getmesdrawing_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getmesdrawingResponse" message="tns:IProductionService_getmesdrawing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpadata">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getpadata" message="tns:IProductionService_getpadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/productionservice/IProductionService/getpadataResponse" message="tns:IProductionService_getpadata_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductionService" type="tns:IProductionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getonedaydetail">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getonedaydetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsobasedschedule">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getsobasedschedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getactivelabor">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getactivelabor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getmesinfo">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getmesinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getmesdrawing">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getmesdrawing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpadata">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getpadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IProductionService1" type="tns:IProductionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getonedaydetail">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getonedaydetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getsobasedschedule">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getsobasedschedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getactivelabor">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getactivelabor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getmesinfo">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getmesinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getmesdrawing">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getmesdrawing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpadata">
+      <soap:operation soapAction="http://services.it.tcg/epicor/productionservice/IProductionService/getpadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductionService">
+    <wsdl:port name="BasicHttpBinding_IProductionService" binding="tns:BasicHttpBinding_IProductionService">
+      <soap:address location="http://10.77.146.183/productionservice" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IProductionService1" binding="tns:BasicHttpBinding_IProductionService1">
+      <soap:address location="http://10.77.146.183/productionservice/windows" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

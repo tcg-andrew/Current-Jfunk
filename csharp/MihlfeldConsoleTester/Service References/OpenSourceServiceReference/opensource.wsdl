@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.mihlfeld.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.mihlfeld.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.mihlfeld.com">
+      <s:element name="Get_Requestor_ID_List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Requestor_ID_ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Requestor_ID_ListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Rates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD1_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD1_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD2_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD2_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD3_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD3_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD4_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD4_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD5_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD5_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Origin_PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destination_PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ship_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bill_Terms" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Requestor_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_RatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_RatesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Rates_withCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD1_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD1_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD2_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD2_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD3_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD3_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD4_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD4_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD5_NMFC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD5_Weight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Origin_PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destination_PostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Origin_Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destination_Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ship_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bill_Terms" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Requestor_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Rates_withCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Rates_withCountryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_Requestor_ID_ListSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Requestor_ID_List" />
+  </wsdl:message>
+  <wsdl:message name="Get_Requestor_ID_ListSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Requestor_ID_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_RatesSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Rates" />
+  </wsdl:message>
+  <wsdl:message name="Get_RatesSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_RatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Rates_withCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Rates_withCountry" />
+  </wsdl:message>
+  <wsdl:message name="Get_Rates_withCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Rates_withCountryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OpenSourceSoap">
+    <wsdl:operation name="Get_Requestor_ID_List">
+      <wsdl:input message="tns:Get_Requestor_ID_ListSoapIn" />
+      <wsdl:output message="tns:Get_Requestor_ID_ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates">
+      <wsdl:input message="tns:Get_RatesSoapIn" />
+      <wsdl:output message="tns:Get_RatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates_withCountry">
+      <wsdl:input message="tns:Get_Rates_withCountrySoapIn" />
+      <wsdl:output message="tns:Get_Rates_withCountrySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OpenSourceSoap" type="tns:OpenSourceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Requestor_ID_List">
+      <soap:operation soapAction="https://www.mihlfeld.com/Get_Requestor_ID_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates">
+      <soap:operation soapAction="https://www.mihlfeld.com/Get_Rates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates_withCountry">
+      <soap:operation soapAction="https://www.mihlfeld.com/Get_Rates_withCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OpenSourceSoap12" type="tns:OpenSourceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Requestor_ID_List">
+      <soap12:operation soapAction="https://www.mihlfeld.com/Get_Requestor_ID_List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates">
+      <soap12:operation soapAction="https://www.mihlfeld.com/Get_Rates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Rates_withCountry">
+      <soap12:operation soapAction="https://www.mihlfeld.com/Get_Rates_withCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OpenSource">
+    <wsdl:port name="OpenSourceSoap" binding="tns:OpenSourceSoap">
+      <soap:address location="https://services.mihlfeld.com/opensource.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OpenSourceSoap12" binding="tns:OpenSourceSoap12">
+      <soap12:address location="https://services.mihlfeld.com/opensource.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

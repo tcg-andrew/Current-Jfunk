@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TCGEpicor">
+</Property><Property Name="Solution File" Value="C:\Users\jfunk\Documents\Visual Studio 2010\Projects\TCGEpicor\TCGEpicor.sln">
+</Property><Property Name="Date" Value="Monday, October 22, 2012">
+</Property><Property Name="Time" Value="13:21 PM">
+</Property></Properties><Event ErrorLevel="0" Project="MihlfeldConsoleTester" Source="MihlfeldConsoleTester\MihlfeldConsoleTester.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MihlfeldConsoleTester" Source="MihlfeldConsoleTester\MihlfeldConsoleTester.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ObjectConsoleTester" Source="ObjectConsoleTester\ObjectConsoleTester.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ObjectConsoleTester" Source="ObjectConsoleTester\ObjectConsoleTester.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="WindowsConsoleClient" Source="WindowsConsoleClient\WindowsConsoleClient.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="WindowsConsoleClient" Source="WindowsConsoleClient\WindowsConsoleClient.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="WindowsConsoleHost" Source="WindowsConsoleHost\WindowsConsoleHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="WindowsConsoleHost" Source="WindowsConsoleHost\WindowsConsoleHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TestExcel2007AddIn" Source="TestExcel2007AddIn\TestExcel2007AddIn.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TestExcel2007AddIn" Source="TestExcel2007AddIn\TestExcel2007AddIn.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ObjectLibrary" Source="ObjectLibrary\ObjectLibrary.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ObjectLibrary" Source="ObjectLibrary\ObjectLibrary.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="FlatWSDL" Source="FlatWSDL\FlatWSDL.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="FlatWSDL" Source="FlatWSDL\FlatWSDL.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ServiceLibrary" Source="ServiceLibrary\ServiceLibrary.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ServiceLibrary" Source="ServiceLibrary\ServiceLibrary.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ABCCodeServiceHost" Source="ABCCodeServiceHost\ABCCodeServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ABCCodeServiceHost" Source="ABCCodeServiceHost\ABCCodeServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CustomerServiceHost" Source="CustomerServiceHost\CustomerServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CustomerServiceHost" Source="CustomerServiceHost\CustomerServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="FreightRateServiceHost" Source="FreightRateServiceHost\FreightRateServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="FreightRateServiceHost" Source="FreightRateServiceHost\FreightRateServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="JobServiceHost" Source="JobServiceHost\JobServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="JobServiceHost" Source="JobServiceHost\JobServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PartServiceHost" Source="PartServiceHost\PartServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PartServiceHost" Source="PartServiceHost\PartServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PowerAnalyzerServiceHost" Source="PowerAnalyzerServiceHost\PowerAnalyzerServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PowerAnalyzerServiceHost" Source="PowerAnalyzerServiceHost\PowerAnalyzerServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="QuoteServiceHost" Source="QuoteServiceHost\QuoteServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="QuoteServiceHost" Source="QuoteServiceHost\QuoteServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ShipToServiceHost" Source="ShipToServiceHost\ShipToServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ShipToServiceHost" Source="ShipToServiceHost\ShipToServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="QuoteBridgeServiceHost" Source="QuoteBridgeServiceHost\QuoteBridgeServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="QuoteBridgeServiceHost" Source="QuoteBridgeServiceHost\QuoteBridgeServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TestingService" Source="TestingService\TestingService.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TestingService" Source="TestingService\TestingService.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TCGEpicor" Source="TCGEpicor\TCGEpicor.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TCGEpicor" Source="TCGEpicor\TCGEpicor.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="WindowsFormsTester" Source="WindowsFormsTester\WindowsFormsTester.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="WindowsFormsTester" Source="WindowsFormsTester\WindowsFormsTester.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="RailsTestScenarioBuilder" Source="RailsTestScenarioBuilder\RailsTestScenarioBuilder.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="RailsTestScenarioBuilder" Source="RailsTestScenarioBuilder\RailsTestScenarioBuilder.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CISDashboard" Source="CISDashboard\CISDashboard.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CISDashboard" Source="CISDashboard\CISDashboard.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="OrderJobDateMismatch" Source="OrderJobDateMismatch\OrderJobDateMismatch.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="OrderJobDateMismatch" Source="OrderJobDateMismatch\OrderJobDateMismatch.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ModuleBase" Source="ModuleBase\ModuleBase.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ModuleBase" Source="ModuleBase\ModuleBase.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="JobMtlHighIssuedQty" Source="JobMtlHighIssuedQty\JobMtlHighIssuedQty.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="JobMtlHighIssuedQty" Source="JobMtlHighIssuedQty\JobMtlHighIssuedQty.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="SQLAccess" Source="SQLAccess\SQLAccess.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="SQLAccess" Source="SQLAccess\SQLAccess.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PartMinQty" Source="PartMinQty\PartMinQty.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PartMinQty" Source="PartMinQty\PartMinQty.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="AssemblyNoAutoRec" Source="AssemblyNoAutoRec\AssemblyNoAutoRec.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="AssemblyNoAutoRec" Source="AssemblyNoAutoRec\AssemblyNoAutoRec.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="RailsPartInfoUpdate" Source="RailsPartInfoUpdate\RailsPartInfoUpdate.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="RailsPartInfoUpdate" Source="RailsPartInfoUpdate\RailsPartInfoUpdate.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication1" Source="ConsoleApplication1\ConsoleApplication1.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ConsoleApplication1" Source="ConsoleApplication1\ConsoleApplication1.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PackagingMESEdit" Source="PackagingMESEdit\PackagingMESEdit.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PackagingMESEdit" Source="PackagingMESEdit\PackagingMESEdit.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PartDrawingViewer" Source="PartDrawingViewer\PartDrawingViewer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PartDrawingViewer" Source="PartDrawingViewer\PartDrawingViewer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ProductionServiceHost" Source="ProductionServiceHost\ProductionServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ProductionServiceHost" Source="ProductionServiceHost\ProductionServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Sandbox" Source="Sandbox\Sandbox.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Sandbox" Source="Sandbox\Sandbox.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="LaborServiceHost" Source="LaborServiceHost\LaborServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="LaborServiceHost" Source="LaborServiceHost\LaborServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="WebServiceClient" Source="WebServiceClient\WebServiceClient.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="WebServiceClient" Source="WebServiceClient\WebServiceClient.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="LabelBatchBuilder" Source="LabelBatchBuilder\LabelBatchBuilder.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="LabelBatchBuilder" Source="LabelBatchBuilder\LabelBatchBuilder.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="SOBasedScheduleServiceHost" Source="SOBasedScheduleServiceHost\SOBasedScheduleServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="SOBasedScheduleServiceHost" Source="SOBasedScheduleServiceHost\SOBasedScheduleServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="AgilentDataProcessor" Source="AgilentDataProcessor\AgilentDataProcessor.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="AgilentDataProcessor" Source="AgilentDataProcessor\AgilentDataProcessor.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="OperationBatch" Source="OperationBatch\OperationBatch.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="OperationBatch" Source="OperationBatch\OperationBatch.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TCGEpicorForExcel2007" Source="TCGEpicorForExcel2007\TCGEpicorForExcel2007.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TCGEpicorForExcel2007" Source="TCGEpicorForExcel2007\TCGEpicorForExcel2007.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PackReport" Source="PackReport\PackReport.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PackReport" Source="PackReport\PackReport.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="OrderDtlDateMaintenanceServiceHost" Source="OrderDtlDateMaintenanceServiceHost\OrderDtlDateMaintenanceServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="OrderDtlDateMaintenanceServiceHost" Source="OrderDtlDateMaintenanceServiceHost\OrderDtlDateMaintenanceServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="JobMtlDateMaintenanceServiceHost" Source="JobMtlDateMaintenanceServiceHost\JobMtlDateMaintenanceServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="JobMtlDateMaintenanceServiceHost" Source="JobMtlDateMaintenanceServiceHost\JobMtlDateMaintenanceServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ULLabelPrinter" Source="ULLabelPrinter\ULLabelPrinter.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ULLabelPrinter" Source="ULLabelPrinter\ULLabelPrinter.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Styleline.WinAnalyzer.AnalyzerLib" Source="Styleline.WinAnalyzer.AnalyzerLib\Styleline.WinAnalyzer.AnalyzerLib.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Styleline.WinAnalyzer.AnalyzerLib" Source="Styleline.WinAnalyzer.AnalyzerLib\Styleline.WinAnalyzer.AnalyzerLib.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Styleline.WinAnalyzer.CommPipe" Source="Styleline.WinAnalyzer.CommPipe\Styleline.WinAnalyzer.CommPipe.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Styleline.WinAnalyzer.CommPipe" Source="Styleline.WinAnalyzer.CommPipe\Styleline.WinAnalyzer.CommPipe.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Styleline.WinAnalyzer.DAL" Source="Styleline.WinAnalyzer.DAL\Styleline.WinAnalyzer.DAL.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Styleline.WinAnalyzer.DAL" Source="Styleline.WinAnalyzer.DAL\Styleline.WinAnalyzer.DAL.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="PowerAnalyzer" Source="PowerAnalyzer\PowerAnalyzer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PowerAnalyzer" Source="PowerAnalyzer\PowerAnalyzer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="FoxProServiceHost" Source="FoxProServiceHost\FoxProServiceHost.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="FoxProServiceHost" Source="FoxProServiceHost\FoxProServiceHost.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TaxCloud" Source="TaxCloud\TaxCloud.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="TaxCloud" Source="TaxCloud\TaxCloud.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CIGReceivingLabels" Source="CIGReceivingLabels\CIGReceivingLabels.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CIGReceivingLabels" Source="CIGReceivingLabels\CIGReceivingLabels.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Styleline.WinAnalyzer.WinClient" Source="Styleline.WinAnalyzer.WinClient\Styleline.WinAnalyzer.WinClient.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Styleline.WinAnalyzer.WinClient" Source="Styleline.WinAnalyzer.WinClient\Styleline.WinAnalyzer.WinClient.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="TCGEpicor.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="TCGEpicor.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="TCGEpicorForExcel2007" Source="TCGEpicorForExcel2007\TCGEpicorForExcel2007.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="TestExcel2007AddIn" Source="TestExcel2007AddIn\TestExcel2007AddIn.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

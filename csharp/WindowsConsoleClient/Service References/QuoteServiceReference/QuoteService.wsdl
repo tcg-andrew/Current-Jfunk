@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/quoteservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QuoteService" targetNamespace="http://services.it.tcg/epicor/quoteservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IQuoteService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpBinding_IQuoteService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/quoteservice">
+      <xsd:element name="getquoteinfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="username" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="custid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="partnum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="revision" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="shelvingpartnum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="shelvingrevision" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="isconfigured" type="xsd:boolean" />
+            <xsd:element minOccurs="0" name="needsdetails" type="xsd:boolean" />
+            <xsd:element minOccurs="0" name="systemid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="numdoors" type="xsd:int" />
+            <xsd:element minOccurs="0" name="doorsizeid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="constructionid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="colorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="lightid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="handleid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="shelvingid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="shelfcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="shelfpostcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1shelftypeid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1shelfcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1postcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1shelfqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1postqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1lanedivqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1perimguardqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1glidesheetqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1ptmqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1baseqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame1extbracketqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2shelftypeid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2shelfcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2postcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2shelfqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2postqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2lanedivqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2perimguardqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2glidesheetqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2ptmqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2baseqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame2extbracketqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3shelftypeid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3shelfcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3postcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3shelfqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3postqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3lanedivqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3perimguardqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3glidesheetqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3ptmqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3baseqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame3extbracketqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4shelftypeid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4shelfcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4postcolorid" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4shelfqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4postqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4lanedivqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4perimguardqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4glidesheetqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4ptmqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4baseqty" type="xsd:int" />
+            <xsd:element minOccurs="0" name="frame4extbracketqty" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getquoteinfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getquoteinfoResult" nillable="true" type="tns:quotegetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="quotegetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfquoteinfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="quotegetresult" nillable="true" type="tns:quotegetresult" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary">
+      <xsd:complexType name="ArrayOfquoteinfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="quoteinfo" nillable="true" type="tns:quoteinfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfquoteinfo" nillable="true" type="tns:ArrayOfquoteinfo" />
+      <xsd:complexType name="quoteinfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="description" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="price" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="quoteinfo" nillable="true" type="tns:quoteinfo" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuoteService_getquoteinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getquoteinfo" />
+  </wsdl:message>
+  <wsdl:message name="IQuoteService_getquoteinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getquoteinfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuoteService">
+    <wsdl:operation name="getquoteinfo">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/quoteservice/IQuoteService/getquoteinfo" message="tns:IQuoteService_getquoteinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/quoteservice/IQuoteService/getquoteinfoResponse" message="tns:IQuoteService_getquoteinfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuoteService" type="tns:IQuoteService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IQuoteService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getquoteinfo">
+      <soap:operation soapAction="http://services.it.tcg/epicor/quoteservice/IQuoteService/getquoteinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IQuoteService1" type="tns:IQuoteService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IQuoteService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getquoteinfo">
+      <soap:operation soapAction="http://services.it.tcg/epicor/quoteservice/IQuoteService/getquoteinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuoteService">
+    <wsdl:port name="BasicHttpBinding_IQuoteService" binding="tns:BasicHttpBinding_IQuoteService">
+      <soap:address location="https://itmart.it.tcg/quoteservice" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IQuoteService1" binding="tns:BasicHttpBinding_IQuoteService1">
+      <soap:address location="https://itmart.it.tcg/quoteservice/windows" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

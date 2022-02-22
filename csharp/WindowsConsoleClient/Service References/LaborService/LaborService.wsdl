@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/laborservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LaborService" targetNamespace="http://services.it.tcg/epicor/laborservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/laborservice">
+      <xsd:element name="startactivity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="plant" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="assemblyseq" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="oprseq" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="startactivityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="startactivityResult" nillable="true" type="tns:startactivityresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="startactivityresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="startactivityresult" nillable="true" type="tns:startactivityresult" />
+      <xsd:element name="endactivity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="plant" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="jobnum" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="assemblyseq" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="oprseq" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="qty" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="scrap" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endactivityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="endactivityResult" nillable="true" type="tns:endactivityresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="endactivityresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="endactivityresult" nillable="true" type="tns:endactivityresult" />
+      <xsd:element name="startindirect">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="indirectcode" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="resourcegroup" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="startindirectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="startindirectResult" nillable="true" type="tns:startindirectresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="startindirectresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="startindirectresult" nillable="true" type="tns:startindirectresult" />
+      <xsd:element name="endindirect">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endindirectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="endindirectResult" nillable="true" type="tns:endindirectresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="endindirectresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="endindirectresult" nillable="true" type="tns:endindirectresult" />
+      <xsd:element name="clockin">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="shift" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="clockinResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="clockinResult" nillable="true" type="tns:clockinresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="clockinresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="clockinresult" nillable="true" type="tns:clockinresult" />
+      <xsd:element name="clockout">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="employeeid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="clockoutResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="clockoutResult" nillable="true" type="tns:clockoutresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="clockoutresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="clockoutresult" nillable="true" type="tns:clockoutresult" />
+      <xsd:element name="getindirectcodes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getindirectcodesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getindirectcodesResult" nillable="true" type="tns:getindirectcodesresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getindirectcodesresult">
+        <xsd:sequence>
+          <xsd:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getindirectcodesresult" nillable="true" type="tns:getindirectcodesresult" />
+      <xsd:element name="getresourcecodes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getresourcecodesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getresourcecodesResult" nillable="true" type="tns:getresourcecodesresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getresourcecodesresult">
+        <xsd:sequence>
+          <xsd:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="epicor" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getresourcecodesresult" nillable="true" type="tns:getresourcecodesresult" />
+      <xsd:element name="getvacationhours">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getvacationhoursResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getvacationhoursResult" nillable="true" type="tns:getstringresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getstringresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="epicor" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getstringresult" nillable="true" type="tns:getstringresult" />
+      <xsd:element name="getempname">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="company" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getempnameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getempnameResult" nillable="true" type="tns:getstringresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <xsd:complexType name="ArrayOfKeyValueOfstringstring">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringstring">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="Key" nillable="true" type="xsd:string" />
+                <xsd:element name="Value" nillable="true" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfKeyValueOfstringstring" nillable="true" type="tns:ArrayOfKeyValueOfstringstring" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ILaborService_startactivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:startactivity" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_startactivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:startactivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_endactivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:endactivity" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_endactivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:endactivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_startindirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:startindirect" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_startindirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:startindirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_endindirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:endindirect" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_endindirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:endindirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_clockin_InputMessage">
+    <wsdl:part name="parameters" element="tns:clockin" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_clockin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clockinResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_clockout_InputMessage">
+    <wsdl:part name="parameters" element="tns:clockout" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_clockout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clockoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getindirectcodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getindirectcodes" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getindirectcodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getindirectcodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getresourcecodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getresourcecodes" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getresourcecodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getresourcecodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getvacationhours_InputMessage">
+    <wsdl:part name="parameters" element="tns:getvacationhours" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getvacationhours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getvacationhoursResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getempname_InputMessage">
+    <wsdl:part name="parameters" element="tns:getempname" />
+  </wsdl:message>
+  <wsdl:message name="ILaborService_getempname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getempnameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILaborService">
+    <wsdl:operation name="startactivity">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/startactivity" message="tns:ILaborService_startactivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/startactivityResponse" message="tns:ILaborService_startactivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="endactivity">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/endactivity" message="tns:ILaborService_endactivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/endactivityResponse" message="tns:ILaborService_endactivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="startindirect">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/startindirect" message="tns:ILaborService_startindirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/startindirectResponse" message="tns:ILaborService_startindirect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="endindirect">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/endindirect" message="tns:ILaborService_endindirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/endindirectResponse" message="tns:ILaborService_endindirect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clockin">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/clockin" message="tns:ILaborService_clockin_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/clockinResponse" message="tns:ILaborService_clockin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clockout">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/clockout" message="tns:ILaborService_clockout_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/clockoutResponse" message="tns:ILaborService_clockout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getindirectcodes">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getindirectcodes" message="tns:ILaborService_getindirectcodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getindirectcodesResponse" message="tns:ILaborService_getindirectcodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getresourcecodes">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getresourcecodes" message="tns:ILaborService_getresourcecodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getresourcecodesResponse" message="tns:ILaborService_getresourcecodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getvacationhours">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getvacationhours" message="tns:ILaborService_getvacationhours_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getvacationhoursResponse" message="tns:ILaborService_getvacationhours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getempname">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getempname" message="tns:ILaborService_getempname_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/laborservice/ILaborService/getempnameResponse" message="tns:ILaborService_getempname_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILaborService" type="tns:ILaborService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="startactivity">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/startactivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endactivity">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/endactivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startindirect">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/startindirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endindirect">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/endindirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clockin">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/clockin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clockout">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/clockout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getindirectcodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getindirectcodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getresourcecodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getresourcecodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvacationhours">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getvacationhours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getempname">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getempname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ILaborService1" type="tns:ILaborService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="startactivity">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/startactivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endactivity">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/endactivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startindirect">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/startindirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endindirect">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/endindirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clockin">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/clockin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clockout">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/clockout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getindirectcodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getindirectcodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getresourcecodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getresourcecodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvacationhours">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getvacationhours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getempname">
+      <soap:operation soapAction="http://services.it.tcg/epicor/laborservice/ILaborService/getempname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LaborService">
+    <wsdl:port name="BasicHttpBinding_ILaborService" binding="tns:BasicHttpBinding_ILaborService">
+      <soap:address location="http://10.77.146.183/laborservice" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ILaborService1" binding="tns:BasicHttpBinding_ILaborService1">
+      <soap:address location="http://10.77.146.183/laborservice/windows" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

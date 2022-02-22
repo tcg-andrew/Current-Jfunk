@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopCapacity", "ShopCapacity\ShopCapacity.csproj", "{C626FF76-7B6B-42AC-A2FF-C412894520BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapacityOneDay", "CapacityOneDay\CapacityOneDay.csproj", "{466839FE-3E5A-4DB2-9B91-ACE3795E1C9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C626FF76-7B6B-42AC-A2FF-C412894520BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C626FF76-7B6B-42AC-A2FF-C412894520BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C626FF76-7B6B-42AC-A2FF-C412894520BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C626FF76-7B6B-42AC-A2FF-C412894520BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466839FE-3E5A-4DB2-9B91-ACE3795E1C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466839FE-3E5A-4DB2-9B91-ACE3795E1C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466839FE-3E5A-4DB2-9B91-ACE3795E1C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466839FE-3E5A-4DB2-9B91-ACE3795E1C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

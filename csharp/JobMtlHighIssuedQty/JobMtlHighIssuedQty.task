@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module>
+  <assembly>JobMtlHighIssuedQty</assembly>
+  <menu>Job Tasks->JobMtl Issued Qty 25% >= Req Qty</menu>
+</module>

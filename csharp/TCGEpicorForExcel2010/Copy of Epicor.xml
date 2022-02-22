@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns" label="Epicor">
+        <group id="ABCCode" label="ABC Codes">
+          <button id="but_Load_ABCCode" onAction="but_LoadABCCode_Click" label="Load" imageMso="FileOpen" size="large" screentip="Load ABC Code data from Epicor Server" />
+          <button id="but_Save_ABCCode" onAction="but_SaveABCCode_Click" label="Save" imageMso="FileSave" size="large" screentip="Save ABC Code data to Epicor Server "/>
+        </group>
+        <group id="Parts" label="Parts">
+          <button id="but_Load_Parts" onAction="but_LoadPart_Click" label="Load" imageMso="FileOpen" size="large" screentip="Load data for Parts with Min Qty variance" />
+          <button id="but_Save_Parts" onAction="but_SavePart_Click" label="Save" imageMso="FileSave" size="large" screentip="Save updated Part Min Qty data"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

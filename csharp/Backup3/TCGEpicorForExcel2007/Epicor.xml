@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns" label="Epicor">
+        <group id="ABCCode" label="ABC Codes" getVisible="grp_ABCCode_IsVisible">
+          <button id="but_Load_ABCCode" onAction="but_LoadABCCode_Click" label="Load" imageMso="FileOpen" size="large" screentip="Load ABC Code data from Epicor Server" />
+          <button id="but_Save_ABCCode" onAction="but_SaveABCCode_Click" label="Save" imageMso="FileSave" size="large" screentip="Save ABC Code data to Epicor Server "/>
+        </group>
+        <group id="Parts" label="Parts" getVisible="grp_Parts_IsVisible">
+          <button id="but_Load_Parts" onAction="but_LoadPart_Click" label="Load" imageMso="FileOpen" size="large" screentip="Load data for Parts with Min Qty variance" />
+          <button id="but_Save_Parts" onAction="but_SavePart_Click" label="Save" imageMso="FileSave" size="large" screentip="Save updated Part Min Qty data"/>
+        </group>
+        <group id="PowerAnalyzer" label="Power Analyzer2" getVisible="grp_PowerAnalyzer_IsVisible">
+          <button id="but_Load_PowerAnalyzer" onAction="but_LoadPowerAnalyzer_Click" label="Load" imageMso="FileOpen" size="large" visible="false"/>
+          <button id="but_Save_PowerAnalyzer" onAction="but_SavePowerAnalyzer_Click" label="Upload" imageMso="FileSave" size="large"/>
+        </group>
+        <group id="Jobs" label="Jobs" getVisible="grp_Jobs_IsVisible">
+          <button id="but_Load_Jobs" onAction="but_LoadJobs_Click" label="Load" imageMso="FileOpen" size="large"/>
+          <button id="but_Save_Jobs" onAction="but_SaveJobs_Click" label="Save" imageMso="FileSave" size="large"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

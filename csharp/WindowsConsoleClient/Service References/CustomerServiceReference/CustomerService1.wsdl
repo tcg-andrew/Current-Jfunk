@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/customerservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://services.it.tcg/epicor/CustomerService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomerService" targetNamespace="http://services.it.tcg/epicor/customerservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://services.it.tcg/epicor/CustomerService" location="https://localhost:9010/CustomerService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/customerservice">
+      <xsd:element name="getallcustomers">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getallcustomersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getallcustomersResult" nillable="true" type="tns:customergetallresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="customergetallresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceLibrary.GetAllCustomers" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfcustomer" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customergetallresult" nillable="true" type="tns:customergetallresult" />
+      <xsd:element name="getcustomerbycustid">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="custid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getcustomerbycustidResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getcustomerbycustidResult" nillable="true" type="tns:customergetsingleresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="customergetsingleresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q2:ArrayOfcustomer" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customergetsingleresult" nillable="true" type="tns:customergetsingleresult" />
+      <xsd:element name="getspecialinstruction">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="custid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getspecialinstructionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getspecialinstructionResult" nillable="true" type="tns:customergetspecialinstructionresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="customergetspecialinstructionresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="epicor" nillable="true" type="q3:ArrayOfstring" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customergetspecialinstructionresult" nillable="true" type="tns:customergetspecialinstructionresult" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary.GetAllCustomers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary.GetAllCustomers">
+      <xsd:complexType name="ArrayOfcustomer">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="customer" nillable="true" type="tns:customer" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfcustomer" nillable="true" type="tns:ArrayOfcustomer" />
+      <xsd:complexType name="customer">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="custid" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="custnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="phonenum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="state" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="zip" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customer" nillable="true" type="tns:customer" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary">
+      <xsd:complexType name="ArrayOfcustomer">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="customer" nillable="true" type="tns:customer" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfcustomer" nillable="true" type="tns:ArrayOfcustomer" />
+      <xsd:complexType name="customer">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="address1" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="address2" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="address3" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="city" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="country" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="custid" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="custnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="discountpercent" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="emailaddress" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faxnum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="phonenum" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="specialinstructions" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="staddress1" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="staddress2" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="staddress3" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="state" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="stcity" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="stcountry" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ststate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="stzip" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="zip" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customer" nillable="true" type="tns:customer" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <xsd:complexType name="ArrayOfstring">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerService_getallcustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getallcustomers" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_getallcustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getallcustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_getcustomerbycustid_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcustomerbycustid" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_getcustomerbycustid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcustomerbycustidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_getspecialinstruction_InputMessage">
+    <wsdl:part name="parameters" element="tns:getspecialinstruction" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_getspecialinstruction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getspecialinstructionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerService">
+    <wsdl:operation name="getallcustomers">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getallcustomers" message="tns:ICustomerService_getallcustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getallcustomersResponse" message="tns:ICustomerService_getallcustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getcustomerbycustid">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getcustomerbycustid" message="tns:ICustomerService_getcustomerbycustid_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getcustomerbycustidResponse" message="tns:ICustomerService_getcustomerbycustid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getspecialinstruction">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getspecialinstruction" message="tns:ICustomerService_getspecialinstruction_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/customerservice/ICustomerService/getspecialinstructionResponse" message="tns:ICustomerService_getspecialinstruction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="CustomerService">
+    <wsdl:port name="BasicHttpBinding_ICustomerService" binding="i0:BasicHttpBinding_ICustomerService">
+      <soap:address location="https://localhost:9010/CustomerService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ShopCapacity">
+</Property><Property Name="Solution File" Value="C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\ShopCapacity.sln">
+</Property><Property Name="Date" Value="Tuesday, March 10, 2015">
+</Property><Property Name="Time" Value="13:32 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ShopCapacity.sln" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity.sln">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.csproj" Description="Project file successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\ShopCapacity.csproj">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\ShopCapacity.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.Designer.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\ShopCapacity.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Program.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Program.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Properties\Settings.settings" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.resx" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\ShopCapacity.resx">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\Properties\Resources.resx" Description="File successfully backed up as C:\Users\mturner\Documents\code\sql\csharp\ShopCapacity-CIG\Backup\ShopCapacity\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ShopCapacity.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ShopCapacity.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ShopCapacity" Source="ShopCapacity\ShopCapacity.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

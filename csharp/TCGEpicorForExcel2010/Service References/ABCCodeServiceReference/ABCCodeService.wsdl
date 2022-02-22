@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.it.tcg/epicor/abccodeservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ABCCodeService" targetNamespace="http://services.it.tcg/epicor/abccodeservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IABCCodeService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpBinding_IABCCodeService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://services.it.tcg/epicor/abccodeservice">
+      <xsd:element name="getallabccodes">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getallabccodesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getallabccodesResult" nillable="true" type="tns:abccodegetresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="abccodegetresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q1:ArrayOfabccode" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="abccodegetresult" nillable="true" type="tns:abccodegetresult" />
+      <xsd:element name="updateabccodes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="data" nillable="true" type="tns:abccodeupdaterequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="abccodeupdaterequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="username" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string" />
+          <xsd:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="epicor" nillable="true" type="q2:ArrayOfabccode" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="abccodeupdaterequest" nillable="true" type="tns:abccodeupdaterequest" />
+      <xsd:element name="updateabccodesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="updateabccodesResult" nillable="true" type="tns:abccodeupdateresult" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="abccodeupdateresult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="exception" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="abccodeupdateresult" nillable="true" type="tns:abccodeupdateresult" />
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceLibrary">
+      <xsd:complexType name="ArrayOfabccode">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="abccode" nillable="true" type="tns:abccode" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfabccode" nillable="true" type="tns:ArrayOfabccode" />
+      <xsd:complexType name="abccode">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="code" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="freq" type="xsd:int" />
+          <xsd:element minOccurs="0" name="mincost" type="xsd:decimal" />
+          <xsd:element minOccurs="0" name="minvol" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="abccode" nillable="true" type="tns:abccode" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IABCCodeService_getallabccodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getallabccodes" />
+  </wsdl:message>
+  <wsdl:message name="IABCCodeService_getallabccodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getallabccodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IABCCodeService_updateabccodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateabccodes" />
+  </wsdl:message>
+  <wsdl:message name="IABCCodeService_updateabccodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateabccodesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IABCCodeService">
+    <wsdl:operation name="getallabccodes">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/getallabccodes" message="tns:IABCCodeService_getallabccodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/getallabccodesResponse" message="tns:IABCCodeService_getallabccodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateabccodes">
+      <wsdl:input wsaw:Action="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/updateabccodes" message="tns:IABCCodeService_updateabccodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/updateabccodesResponse" message="tns:IABCCodeService_updateabccodes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IABCCodeService" type="tns:IABCCodeService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IABCCodeService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getallabccodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/getallabccodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateabccodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/updateabccodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IABCCodeService1" type="tns:IABCCodeService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IABCCodeService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getallabccodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/getallabccodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateabccodes">
+      <soap:operation soapAction="http://services.it.tcg/epicor/abccodeservice/IABCCodeService/updateabccodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ABCCodeService">
+    <wsdl:port name="BasicHttpBinding_IABCCodeService" binding="tns:BasicHttpBinding_IABCCodeService">
+      <soap:address location="https://sql2.it.tcg/abccodeservice" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IABCCodeService1" binding="tns:BasicHttpBinding_IABCCodeService1">
+      <soap:address location="https://sql2.it.tcg/abccodeservice/windows" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

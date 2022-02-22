@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="secureBasic" closeTimeout="00:01:00"
+            openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+            allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+            maxBufferSize="2147483647" maxBufferPoolSize="524288" maxReceivedMessageSize="2147483647"
+            messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered"
+            useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+              maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="Transport">
+            <transport clientCredentialType="Basic" proxyCredentialType="None"
+                realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="secureWindows" closeTimeout="00:01:00"
+            openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+            allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+            maxBufferSize="2147483647" maxBufferPoolSize="524288" maxReceivedMessageSize="2147483647"
+            messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered"
+            useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+              maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="Transport">
+            <transport clientCredentialType="Windows" proxyCredentialType="None"
+                realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="https://sql2.it.tcg/abccodeservice" binding="basicHttpBinding"
+        bindingConfiguration="secureBasic" contract="ABCCodeServiceReference.IABCCodeService" name="basic" />
+      <endpoint address="https://sql2.it.tcg/abccodeservice/windows"
+        binding="basicHttpBinding" bindingConfiguration="secureWindows"
+        contract="ABCCodeServiceReference.IABCCodeService" name="windows" >
+        <identity>
+          <servicePrincipalName value="spn" />
+        </identity>
+      </endpoint>
+      <endpoint address="https://sql2.it.tcg/partservice" binding="basicHttpBinding"
+        bindingConfiguration="secureBasic" contract="PartServiceReference.IPartService"
+        name="basic" />
+      <endpoint address="https://sql2.it.tcg/partservice/windows"
+        binding="basicHttpBinding" bindingConfiguration="secureWindows"
+        contract="PartServiceReference.IPartService" name="windows" >
+        <identity>
+          <servicePrincipalName value="spn" />
+        </identity>
+      </endpoint>
+    </client>
+  </system.serviceModel>
+</configuration>

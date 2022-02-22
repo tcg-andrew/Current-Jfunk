@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module>
+  <assembly>AssemblyNoAutoRec</assembly>
+  <menu>Part Tasks->Assemblies w/ No Auto Rec</menu>
+</module>
